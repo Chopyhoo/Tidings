@@ -12,6 +12,8 @@ import ObjectMapper
 
 class AllNewsModel {
     
+    public var feed : [News]?
+    
     func setupConnection() {
         
         let client = TCPClient(address: "ec2-34-212-3-15.us-west-2.compute.amazonaws.com", port: 4444)
@@ -22,6 +24,7 @@ class AllNewsModel {
         case .failure(let error):
             print(error)
         }
+        client.close()
     }
     
     private func requestData(client: TCPClient) {
@@ -31,28 +34,25 @@ class AllNewsModel {
             let request = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
             switch client.send(data: convertToJavaString(string: request)) {
             case .success:
-                var allData:[Byte] = [];
-                var finished = false
-                while (finished == false) {
-                    if let data = client.read(1024*768) {
+                var resultJSON = "";
+                var readInProgress = true
+                while (readInProgress) {
+                    if let data = client.read(1900*1) {
                         var dataFoo = data
                         dataFoo.removeFirst(2)
-                        allData.append(contentsOf: dataFoo)
+                        if let result = String(bytes: dataFoo, encoding: .utf8) {
+                            resultJSON += result
+                        }
                     } else {
-                        finished = true
+                        readInProgress = false
                     }
                 }
-
-                if let resultJSON = String(bytes: allData, encoding: .utf8) {
-                    let feed: [News]? = Mapper<Feed>().map(JSONString: resultJSON)?.news
-                    print(resultJSON)
-                }
+                feed = Mapper<Feed>().map(JSONString: resultJSON)?.news
             case .failure(let error):
                 print(error)
             }
         }
         catch {
-            print("SAD")
         }
     }
     
@@ -76,34 +76,9 @@ class AllNewsModel {
         }
         
         var stringLength = [(bytes[0] << 7) | (bytes[1])]
-        
-        //stringLength = UInt8(CFSwapInt32HostToBig(UInt32(stringLength)))
-        //        let result = String(bytesNoCopy: UnsafeMutableRawPointer(mutating: bytes), length: Int(stringLength[0]), encoding: String.Encoding.utf8, freeWhenDone: false)
+    
         let result = NSString(bytes: bytes, length: Int(stringLength[0]), encoding: String.Encoding.utf8.rawValue)
         
         return String(describing: result)
     }
-    
-    //    - (NSString*) convertToNSStringFromJavaUTF8 : (NSData*) data {
-    //    int length = [data length];
-    //    const uint8_t *bytes = (const uint8_t *)[data bytes];
-    //    if(length &lt; 2) {
-    //    return nil;
-    //    }
-    //    // demarshall the string length
-    //    uint16_t myStringLen = (bytes[0] &lt;&lt; 8) | (bytes[1]);
-    //
-    //    // convert from network to host endianness
-    //    myStringLen = ntohs(myStringLen);
-    //
-    //    bytes += 2;
-    //    length -= 2;
-    //
-    //    // make sure we actually have as much data as we say we have
-    //    if(myStringLen &gt; length)
-    //    myStringLen = (uint16_t)length;
-    //
-    //    // demarshall the string
-    //    return [[[NSString alloc] initWithBytes:bytes length:myStringLen encoding:NSUTF8StringEncoding] autorelease];
-    //    }
 }

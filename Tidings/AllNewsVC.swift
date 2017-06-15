@@ -29,6 +29,10 @@ class AllNewsVC: UITableViewController {
         let cell = UITableViewCell()
         return cell
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 0
+    }
 
     private func customFeed() {
         let path = Bundle.main.path(forResource: "feed", ofType: "json")
