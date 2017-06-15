@@ -34,7 +34,7 @@ class AllNewsVC: UITableViewController {
         let path = Bundle.main.path(forResource: "feed", ofType: "json")
         do {
             let feed = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-            let feedMapped: [News]? = Mapper<News>().mapArray(JSONString: feed)
+            let feedMapped: [News]? = Mapper<Feed>().map(JSONString: feed)?.news
             print("hui")
             
         } catch(let error) {

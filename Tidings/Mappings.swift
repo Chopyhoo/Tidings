@@ -9,20 +9,45 @@
 import Foundation
 import ObjectMapper
 
+struct Feed : Mappable {
+    var news: [News]?
+    
+    init?(map: Map) { }
+    
+    mutating func mapping(map: Map) {
+        news <- map["feed"]
+    }
+}
+
 struct News : Mappable {
     var date: String?
-    var newsLink: URL?
+    
+    private var _newsLink: String?
+    var newsLink: URL? {
+        if let _newsLink = _newsLink {
+            return URL(string: _newsLink)
+        }
+        return nil
+    }
+    
     var author: String?
     var title: String?
-    var thumblink: URL?
+    
+    private var _thumblink: String?
+    var thumblink: URL? {
+        if let _thumblink = _thumblink {
+            return URL(string: _thumblink)
+        }
+        return nil
+    }
     
     init?(map: Map) { }
     
     mutating func mapping(map: Map) {
         date <- map["date"]
-        newsLink <- map["newsLink"]
+        _newsLink <- map["newslink"]
         author <- map["author"]
         title <- map["title"]
-        thumblink <- map["thumblink"]
+        _thumblink <- map["thumblink"]
     }
 }
