@@ -1,0 +1,15 @@
+PODS:
+  - ObjectMapper (2.2.7)
+  - SwiftSocket (2.0.1)
+
+DEPENDENCIES:
+  - ObjectMapper (~> 2.2)
+  - SwiftSocket
+
+SPEC CHECKSUMS:
+  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  SwiftSocket: 2d814afdc97c89217982f86fd036c1874134a63f
+
+PODFILE CHECKSUM: 5e5f7571274a6aff87982b4e7c54bee3e2ffbccb
+
+COCOAPODS: 1.2.0.rc.1

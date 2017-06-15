@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2E01EC8CAA31FC07A9AE6E /* Pods_Tidings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B85647C78F6ABA440BDC50 /* Pods_Tidings.framework */; };
+		6D05949866A48C40D146E0EF /* Pods_TidingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E944C03882D5458F486F92DF /* Pods_TidingsTests.framework */; };
+		EA0EEC134CD51139B2679FAF /* Pods_TidingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48AEE1D8F7403A423F5FA798 /* Pods_TidingsUITests.framework */; };
+		FA38B4411EEF11AA006DFCEE /* Mappings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38B4401EEF11AA006DFCEE /* Mappings.swift */; };
+		FA6665551EF288CB007CF683 /* feed.json in Resources */ = {isa = PBXBuildFile; fileRef = FA6665541EF288CB007CF683 /* feed.json */; };
 		FA6741E71EED6BA8007B2963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6741E61EED6BA8007B2963 /* AppDelegate.swift */; };
-		FA6741E91EED6BA8007B2963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6741E81EED6BA8007B2963 /* ViewController.swift */; };
+		FA6741E91EED6BA8007B2963 /* AllNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6741E81EED6BA8007B2963 /* AllNewsVC.swift */; };
 		FA6741EC1EED6BA8007B2963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6741EA1EED6BA8007B2963 /* Main.storyboard */; };
 		FA6741EF1EED6BA8007B2963 /* Tidings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA6741ED1EED6BA8007B2963 /* Tidings.xcdatamodeld */; };
 		FA6741F11EED6BA8007B2963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6741F01EED6BA8007B2963 /* Assets.xcassets */; };
 		FA6741F41EED6BA8007B2963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6741F21EED6BA8007B2963 /* LaunchScreen.storyboard */; };
 		FA6741FF1EED6BA8007B2963 /* TidingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6741FE1EED6BA8007B2963 /* TidingsTests.swift */; };
 		FA67420A1EED6BA8007B2963 /* TidingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6742091EED6BA8007B2963 /* TidingsUITests.swift */; };
+		FA6742181EED6E90007B2963 /* AllNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6742171EED6E90007B2963 /* AllNewsModel.swift */; };
+		FA67421B1EED6EE8007B2963 /* FullNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67421A1EED6EE8007B2963 /* FullNewsVC.swift */; };
+		FA67421D1EED6EF8007B2963 /* FullNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67421C1EED6EF8007B2963 /* FullNewsModel.swift */; };
+		FA6742221EED7DCF007B2963 /* request.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA6742211EED7DCF007B2963 /* request.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +44,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BAB7BAAFC60939EF87FBC0A /* Pods-Tidings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tidings/Pods-Tidings.debug.xcconfig"; sourceTree = "<group>"; };
+		203042A6E9059E21C16770CF /* Pods-TidingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidingsTests/Pods-TidingsTests.release.xcconfig"; sourceTree = "<group>"; };
+		48AEE1D8F7403A423F5FA798 /* Pods_TidingsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TidingsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A55FC443C76BC08900A3A1 /* Pods-Tidings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidings.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tidings/Pods-Tidings.release.xcconfig"; sourceTree = "<group>"; };
+		55B85647C78F6ABA440BDC50 /* Pods_Tidings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E7E68E3A5F126BF95041073 /* Pods-TidingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidingsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidingsTests/Pods-TidingsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A48F943FD311CBE69E8C9707 /* Pods-TidingsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidingsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TidingsUITests/Pods-TidingsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3E7644BA8E151EF9F05B259 /* Pods-TidingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TidingsUITests/Pods-TidingsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E944C03882D5458F486F92DF /* Pods_TidingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TidingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA38B4401EEF11AA006DFCEE /* Mappings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappings.swift; sourceTree = "<group>"; };
+		FA6665541EF288CB007CF683 /* feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feed.json; sourceTree = "<group>"; };
 		FA6741E31EED6BA8007B2963 /* Tidings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6741E61EED6BA8007B2963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA6741E81EED6BA8007B2963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA6741E81EED6BA8007B2963 /* AllNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsVC.swift; sourceTree = "<group>"; };
 		FA6741EB1EED6BA8007B2963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA6741EE1EED6BA8007B2963 /* Tidings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tidings.xcdatamodel; sourceTree = "<group>"; };
 		FA6741F01EED6BA8007B2963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +69,10 @@
 		FA6742051EED6BA8007B2963 /* TidingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6742091EED6BA8007B2963 /* TidingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidingsUITests.swift; sourceTree = "<group>"; };
 		FA67420B1EED6BA8007B2963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6742171EED6E90007B2963 /* AllNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllNewsModel.swift; sourceTree = "<group>"; };
+		FA67421A1EED6EE8007B2963 /* FullNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNewsVC.swift; sourceTree = "<group>"; };
+		FA67421C1EED6EF8007B2963 /* FullNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNewsModel.swift; sourceTree = "<group>"; };
+		FA6742211EED7DCF007B2963 /* request.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = request.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2E01EC8CAA31FC07A9AE6E /* Pods_Tidings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D05949866A48C40D146E0EF /* Pods_TidingsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0EEC134CD51139B2679FAF /* Pods_TidingsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90A8C5F89ED8789C380A9CC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55B85647C78F6ABA440BDC50 /* Pods_Tidings.framework */,
+				E944C03882D5458F486F92DF /* Pods_TidingsTests.framework */,
+				48AEE1D8F7403A423F5FA798 /* Pods_TidingsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AD5DBE87DF27E4E3D991622 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BAB7BAAFC60939EF87FBC0A /* Pods-Tidings.debug.xcconfig */,
+				54A55FC443C76BC08900A3A1 /* Pods-Tidings.release.xcconfig */,
+				7E7E68E3A5F126BF95041073 /* Pods-TidingsTests.debug.xcconfig */,
+				203042A6E9059E21C16770CF /* Pods-TidingsTests.release.xcconfig */,
+				A48F943FD311CBE69E8C9707 /* Pods-TidingsUITests.debug.xcconfig */,
+				B3E7644BA8E151EF9F05B259 /* Pods-TidingsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FA6741DA1EED6BA8007B2963 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +133,8 @@
 				FA6741FD1EED6BA8007B2963 /* TidingsTests */,
 				FA6742081EED6BA8007B2963 /* TidingsUITests */,
 				FA6741E41EED6BA8007B2963 /* Products */,
+				9AD5DBE87DF27E4E3D991622 /* Pods */,
+				90A8C5F89ED8789C380A9CC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +151,11 @@
 		FA6741E51EED6BA8007B2963 /* Tidings */ = {
 			isa = PBXGroup;
 			children = (
-				FA6741E61EED6BA8007B2963 /* AppDelegate.swift */,
-				FA6741E81EED6BA8007B2963 /* ViewController.swift */,
-				FA6741EA1EED6BA8007B2963 /* Main.storyboard */,
-				FA6741F01EED6BA8007B2963 /* Assets.xcassets */,
-				FA6741F21EED6BA8007B2963 /* LaunchScreen.storyboard */,
-				FA6741F51EED6BA8007B2963 /* Info.plist */,
-				FA6741ED1EED6BA8007B2963 /* Tidings.xcdatamodeld */,
+				FA6742191EED6E97007B2963 /* All news */,
+				FA67421E1EED6F03007B2963 /* Full news */,
+				FA67421F1EED6F12007B2963 /* Storyboards */,
+				FA6742201EED6F22007B2963 /* Supporting files */,
+				FA38B4401EEF11AA006DFCEE /* Mappings.swift */,
 			);
 			path = Tidings;
 			sourceTree = "<group>";
@@ -128,6 +178,46 @@
 			path = TidingsUITests;
 			sourceTree = "<group>";
 		};
+		FA6742191EED6E97007B2963 /* All news */ = {
+			isa = PBXGroup;
+			children = (
+				FA6741E81EED6BA8007B2963 /* AllNewsVC.swift */,
+				FA6742171EED6E90007B2963 /* AllNewsModel.swift */,
+			);
+			name = "All news";
+			sourceTree = "<group>";
+		};
+		FA67421E1EED6F03007B2963 /* Full news */ = {
+			isa = PBXGroup;
+			children = (
+				FA67421A1EED6EE8007B2963 /* FullNewsVC.swift */,
+				FA67421C1EED6EF8007B2963 /* FullNewsModel.swift */,
+			);
+			name = "Full news";
+			sourceTree = "<group>";
+		};
+		FA67421F1EED6F12007B2963 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA6741EA1EED6BA8007B2963 /* Main.storyboard */,
+				FA6741F21EED6BA8007B2963 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA6742201EED6F22007B2963 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FA6665541EF288CB007CF683 /* feed.json */,
+				FA6742211EED7DCF007B2963 /* request.txt */,
+				FA6741E61EED6BA8007B2963 /* AppDelegate.swift */,
+				FA6741F01EED6BA8007B2963 /* Assets.xcassets */,
+				FA6741F51EED6BA8007B2963 /* Info.plist */,
+				FA6741ED1EED6BA8007B2963 /* Tidings.xcdatamodeld */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA67420E1EED6BA8007B2963 /* Build configuration list for PBXNativeTarget "Tidings" */;
 			buildPhases = (
+				BF9C799DFB24CA8B99F5BC6B /* [CP] Check Pods Manifest.lock */,
 				FA6741DF1EED6BA8007B2963 /* Sources */,
 				FA6741E01EED6BA8007B2963 /* Frameworks */,
 				FA6741E11EED6BA8007B2963 /* Resources */,
+				1F8A881FCA4E6F7B9E15F48F /* [CP] Embed Pods Frameworks */,
+				ABA360EC8A5B6C371AA53CD3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA6742111EED6BA8007B2963 /* Build configuration list for PBXNativeTarget "TidingsTests" */;
 			buildPhases = (
+				52ADD0059E994A5D3F284805 /* [CP] Check Pods Manifest.lock */,
 				FA6741F61EED6BA8007B2963 /* Sources */,
 				FA6741F71EED6BA8007B2963 /* Frameworks */,
 				FA6741F81EED6BA8007B2963 /* Resources */,
+				7993A4B62A28766A5C99BD67 /* [CP] Embed Pods Frameworks */,
+				39B9023E134A3161C5FE4DB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA6742141EED6BA8007B2963 /* Build configuration list for PBXNativeTarget "TidingsUITests" */;
 			buildPhases = (
+				9CD57F59C6D3631BE95F1194 /* [CP] Check Pods Manifest.lock */,
 				FA6742011EED6BA8007B2963 /* Sources */,
 				FA6742021EED6BA8007B2963 /* Frameworks */,
 				FA6742031EED6BA8007B2963 /* Resources */,
+				2A10D2F5041C69671C48E383 /* [CP] Embed Pods Frameworks */,
+				54DB20307150819EC3BB5B7A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,7 +338,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6741F41EED6BA8007B2963 /* LaunchScreen.storyboard in Resources */,
+				FA6665551EF288CB007CF683 /* feed.json in Resources */,
 				FA6741F11EED6BA8007B2963 /* Assets.xcassets in Resources */,
+				FA6742221EED7DCF007B2963 /* request.txt in Resources */,
 				FA6741EC1EED6BA8007B2963 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,12 +361,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F8A881FCA4E6F7B9E15F48F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tidings/Pods-Tidings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A10D2F5041C69671C48E383 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TidingsUITests/Pods-TidingsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39B9023E134A3161C5FE4DB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TidingsTests/Pods-TidingsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52ADD0059E994A5D3F284805 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		54DB20307150819EC3BB5B7A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TidingsUITests/Pods-TidingsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7993A4B62A28766A5C99BD67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TidingsTests/Pods-TidingsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CD57F59C6D3631BE95F1194 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ABA360EC8A5B6C371AA53CD3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tidings/Pods-Tidings-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF9C799DFB24CA8B99F5BC6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA6741DF1EED6BA8007B2963 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6741E91EED6BA8007B2963 /* ViewController.swift in Sources */,
+				FA38B4411EEF11AA006DFCEE /* Mappings.swift in Sources */,
+				FA67421B1EED6EE8007B2963 /* FullNewsVC.swift in Sources */,
+				FA6742181EED6E90007B2963 /* AllNewsModel.swift in Sources */,
+				FA6741E91EED6BA8007B2963 /* AllNewsVC.swift in Sources */,
+				FA67421D1EED6EF8007B2963 /* FullNewsModel.swift in Sources */,
 				FA6741E71EED6BA8007B2963 /* AppDelegate.swift in Sources */,
 				FA6741EF1EED6BA8007B2963 /* Tidings.xcdatamodeld in Sources */,
 			);
@@ -419,6 +662,7 @@
 		};
 		FA67420F1EED6BA8007B2963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAB7BAAFC60939EF87FBC0A /* Pods-Tidings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W4NE8246X5;
@@ -432,6 +676,7 @@
 		};
 		FA6742101EED6BA8007B2963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54A55FC443C76BC08900A3A1 /* Pods-Tidings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W4NE8246X5;
@@ -445,6 +690,7 @@
 		};
 		FA6742121EED6BA8007B2963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E7E68E3A5F126BF95041073 /* Pods-TidingsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +706,7 @@
 		};
 		FA6742131EED6BA8007B2963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 203042A6E9059E21C16770CF /* Pods-TidingsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +722,7 @@
 		};
 		FA6742151EED6BA8007B2963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48F943FD311CBE69E8C9707 /* Pods-TidingsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = W4NE8246X5;
@@ -489,6 +737,7 @@
 		};
 		FA6742161EED6BA8007B2963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3E7644BA8E151EF9F05B259 /* Pods-TidingsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = W4NE8246X5;
@@ -520,6 +769,7 @@
 				FA6742101EED6BA8007B2963 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA6742111EED6BA8007B2963 /* Build configuration list for PBXNativeTarget "TidingsTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +778,7 @@
 				FA6742131EED6BA8007B2963 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA6742141EED6BA8007B2963 /* Build configuration list for PBXNativeTarget "TidingsUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +787,7 @@
 				FA6742161EED6BA8007B2963 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
