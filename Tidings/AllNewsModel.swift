@@ -14,7 +14,7 @@ class AllNewsModel {
     
     func setupConnection() {
         
-        let client = TCPClient(address: "ec2-34-211-183-210.us-west-2.compute.amazonaws.com", port: 4444)
+        let client = TCPClient(address: "ec2-34-212-3-15.us-west-2.compute.amazonaws.com", port: 4444)
         
         switch client.connect(timeout: 10) {
         case .success:
@@ -32,18 +32,19 @@ class AllNewsModel {
             switch client.send(data: convertToJavaString(string: request)) {
             case .success:
                 var allData:[Byte] = [];
-                while (client.read(10000*10000) != nil) {
-                    guard let data = client.read(10000*10000) else {
-                        print("no data")
-                        return
+                var finished = false
+                while (finished == false) {
+                    if let data = client.read(1024*768) {
+                        var dataFoo = data
+                        dataFoo.removeFirst(2)
+                        allData.append(contentsOf: dataFoo)
+                    } else {
+                        finished = true
                     }
-                    var dataBuf = data
-                    dataBuf.removeFirst(2)
-                    allData.append(contentsOf: dataBuf)
                 }
-                
+
                 if let resultJSON = String(bytes: allData, encoding: .utf8) {
-                    let feed: [News]? = Mapper<News>().mapArray(JSONString: resultJSON)
+                    let feed: [News]? = Mapper<Feed>().map(JSONString: resultJSON)?.news
                     print(resultJSON)
                 }
             case .failure(let error):

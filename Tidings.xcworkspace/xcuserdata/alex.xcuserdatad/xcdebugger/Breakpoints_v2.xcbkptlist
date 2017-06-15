@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tidings/AllNewsModel.swift"
-            timestampString = "519210731.519916"
+            timestampString = "519218430.411959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "requestData(client:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tidings/AllNewsModel.swift"
-            timestampString = "519210734.095138"
+            timestampString = "519218430.411959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "requestData(client:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tidings/AllNewsVC.swift"
-            timestampString = "519211611.498401"
+            filePath = "Tidings/AllNewsModel.swift"
+            timestampString = "519218430.411959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "customFeed()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "requestData(client:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
